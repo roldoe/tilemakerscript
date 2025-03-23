@@ -2,5 +2,10 @@
 # Build the vector tiles
 docker run -it --rm -v $(pwd)/data:/data ghcr.io/systemed/tilemaker:master --config /data/config-openmaptiles.json --process /data/process-openmaptiles.lua /data/netherlands-latest.osm.pbf --output /data/nl2.pmtiles
 
-docker run -it -v $(pwd)/data:/data -p 8080:8080 maptiler/tileserver-gl -c config.json
+# install the style from the repo https://github.com/openmaptiles/openmaptiles.git
+# make download-fonts
+# make build-style
+# change url in style.json and fix tileserver_config.json
+
+docker run -it -v $(pwd)/data:/data -p 8080:8080 maptiler/tileserver-gl -c tileserver_config.json
 
