@@ -12,7 +12,7 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "mbtiles://{v3_planetiler}"
+      "url": "pmtiles://{v3_tilemaker}"
     },
     "attribution": {
       "attribution": "<a href=\"https://www.openmaptiles.org/\" target=\"_blank\">&copy; OpenMapTiles</a> <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">&copy; OpenStreetMap contributors</a>",

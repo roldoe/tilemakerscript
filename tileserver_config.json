@@ -12,27 +12,11 @@
       "tilejson": {
         "type": "overlay"
       }
-    },
-    "openmaptiles2": {
-      "style": "openmaptiles/style_tm.json",
-      "tilejson": {
-        "type": "overlay"
-      }
     }
   },
   "data": {
-    "v3_planetiler": {
-      "mbtiles": "/data/nl3.mbtiles"
-    },
     "v3_tilemaker": {
       "pmtiles": "/data/nl2.pmtiles"
-    },
-    "v3_original": {
-      "pmtiles": "/data/nl.pmtiles"
-    },
-    "natural_earth_2_shaded_relief": {
-      "mbtiles": "natural_earth_2_shaded_relief.raster.mbtiles"
     }
   }
 }
-
