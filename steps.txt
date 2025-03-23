@@ -1,0 +1,6 @@
+
+# Build the vector tiles
+docker run -it --rm -v $(pwd)/data:/data ghcr.io/systemed/tilemaker:master --config /data/config-openmaptiles.json --process /data/process-openmaptiles.lua /data/netherlands-latest.osm.pbf --output /data/nl2.pmtiles
+
+docker run -it -v $(pwd)/data:/data -p 8080:8080 maptiler/tileserver-gl -c config.json
+
