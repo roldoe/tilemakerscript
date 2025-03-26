@@ -246,7 +246,8 @@ landcoverKeys   = { wood="wood", forest="wood",
 
 -- POI key/value pairs: based on https://github.com/openmaptiles/openmaptiles/blob/master/layers/poi/mapping.yaml
 poiTags         = { aerialway = Set { "station" },
-					amenity = Set { "arts_centre", "bank", "bar", "bbq", "bicycle_parking", "bicycle_rental", "biergarten", "bus_station", "cafe", "charging_station", "cinema", "clinic", "college", "community_centre", "courthouse", "dentist", "doctors", "embassy", "fast_food", "ferry_terminal", "fire_station", "food_court", "fuel", "grave_yard", "hospital", "ice_cream", "kindergarten", "library", "marketplace", "motorcycle_parking", "nightclub", "nursing_home", "parking", "pharmacy", "place_of_worship", "police", "post_box", "post_office", "prison", "pub", "public_building", "recycling", "restaurant", "school", "shelter", "swimming_pool", "taxi", "telephone", "theatre", "toilets", "townhall", "university", "veterinary", "waste_basket" },
+					amenity = Set { "arts_centre", "bank", "bar", "bbq", "bicycle_parking", "bicycle_rental", "biergarten", "bus_station", "cafe", "charging_station", "cinema", "clinic", "college", "community_centre", "courthouse", "dentist", "drinking_water", "doctors", "embassy", "fast_food", "ferry_terminal", "fire_station", "food_court", "fuel", "grave_yard", "hospital", "ice_cream", "kindergarten", "library", "marketplace", "motorcycle_parking", "nightclub", "nursing_home", "parking", "pharmacy", "place_of_worship", "police", "post_box", "post_office", "prison", "pub", "public_building", "recycling", "restaurant", "school", "shelter", "swimming_pool", "taxi", "telephone", "theatre", "toilets", "townhall", "university", "veterinary", "waste_basket" },
+                                        art_gallery = Set { "artwork" },
 					barrier = Set { "bollard", "border_control", "cycle_barrier", "gate", "lift_gate", "sally_port", "stile", "toll_booth" },
 					building = Set { "dormitory" },
 					highway = Set { "bus_stop" },
@@ -848,8 +849,8 @@ function GetPOIRank()
 	for k,list in pairs(poiTags) do
 		if list[Find(k)] then
 			v = Find(k)	-- k/v are the OSM tag pair
-			-- class = poiClasses[v] or k
-			class = v
+			class = poiClasses[v] or k
+                        if class == "amenity" or class == "leisure" then class = v end -- fix for style
                         rank  = poiClassRanks[class] or 25
 			subclassKey = poiSubClasses[v]
 			if subclassKey then
