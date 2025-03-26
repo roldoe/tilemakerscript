@@ -6,6 +6,7 @@
 ```
 wget "https://raw.githubusercontent.com/roldoe/tilemakerscript/refs/heads/master/process-openmaptiles.lua"
 wget "https://raw.githubusercontent.com/roldoe/tilemakerscript/refs/heads/master/tilemaker_config-openmaptiles.json"
+```
 
 2) Download OpenStreetMaps data
 ```
@@ -51,7 +52,7 @@ unzip data/styles_fonts.zip
 
 7) Double check. De structuur directory structuur zou er nu als volgt uit zien:
 ```
-
+-
 ```
 
   
