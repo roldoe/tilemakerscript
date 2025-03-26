@@ -16,7 +16,7 @@
   },
   "data": {
     "v3_tilemaker": {
-      "pmtiles": "/data/nl2.pmtiles"
+      "pmtiles": "/data/nl.pmtiles"
     }
   }
 }
