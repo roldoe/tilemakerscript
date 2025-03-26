@@ -2,17 +2,17 @@
 
 ## Voorbereiden data
 
-1) Download config en process-openmaptiles.lua voor tilemaker
+1) Download config en process-openmaptiles.lua voor tilemaker:
 ```
-wget "https://raw.githubusercontent.com/roldoe/tilemakerscript/refs/heads/master/process-openmaptiles.lua"
-wget "https://raw.githubusercontent.com/roldoe/tilemakerscript/refs/heads/master/tilemaker_config-openmaptiles.json"
+  wget "https://raw.githubusercontent.com/roldoe/tilemakerscript/refs/heads/master/process-openmaptiles.lua"
+  wget "https://raw.githubusercontent.com/roldoe/tilemakerscript/refs/heads/master/tilemaker_config-openmaptiles.json"
 ```
 
-2) Download OpenStreetMaps data
+2) Download OpenStreetMaps data:
 ```
-mkdir data
-# wget -O data/europe-latest.osm.pbf "https://download.geofabrik.de/europe-latest.osm.pbf"
-wget -O data/nl-latest.osm.pbf "https://download.geofabrik.de/europe/netherlands-latest.osm.pbf"
+  mkdir data
+  # wget -O data/europe-latest.osm.pbf "https://download.geofabrik.de/europe-latest.osm.pbf"
+  wget -O data/nl-latest.osm.pbf "https://download.geofabrik.de/europe/netherlands-latest.osm.pbf"
 ```
 
 3) Download coastlines en landcover data
